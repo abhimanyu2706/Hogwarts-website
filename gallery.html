@@ -1,0 +1,288 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="wow\css\libs\animate.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel = "stylesheet" href = "StyleSheet.css">
+<script src="wow\dist\wow.min.js"></script>
+ <script>
+ new WOW().init();
+ </script>
+<script>
+
+function open_side() {
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("opener").style.display = "none";
+}
+function close_side() {
+	document.getElementById("mySidebar").style.display = "none";
+	document.getElementById("opener").style.display = "block";
+}
+</script>
+
+<style>
+.a{
+	position: absolute;
+	top: 700px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0px 500px;
+	
+	
+}
+.b{
+	position: absolute;
+	top: 1700px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0px 40px;
+	
+}
+.c{
+	position: absolute;
+	top: 2700px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0px 500px;
+	
+}
+.d{
+	position: absolute;
+	top: 3700px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0px 500px;
+	
+}
+.e{
+	position: absolute;
+	top: 4800px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0px 500px;
+	
+}
+.f{
+	position: absolute;
+	top: 5800px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0px 500px;	
+	
+}
+.g{
+	position: absolute;
+	top: 6700px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding-left: 1200px;
+	
+}
+.h{
+	position: absolute;
+	top: 7900px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0 500px;
+	
+}
+.i{
+	position: absolute;
+	top: 8600px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0 200px;
+	
+}
+.j{
+	position: absolute;
+	top: 9600px;
+	left: auto;
+	right: auto;
+	color: white;
+	font-size: 28px;
+	font-family: lucida console;
+	padding: 0 500px;
+	
+}
+h1 {
+	text-align: center;
+	font-size: 64px;
+	font-family: lucida console;
+}
+</style>
+
+</head>
+<body style = "margin-top: 0; margin-left: 0px; margin-right: 0px; background-image: none;">
+
+<div id = "map_holder">
+<i class="fa fa-minus-square" onclick = "map_close();" onmouseover = "this.style.cursor = 'pointer'" style="font-size:40px; color: #63858e;"></i><br>
+<div style = "float: left; font-size: 40px; padding: 280px 25px; margin-left: -10px; color: #63858e; opacity: 0;" onmouseover = "this.style.cursor = 'pointer'" onclick = "prev_map()" id = "prev_map"><i class = "fa fa-play" style = "transform: rotate(180deg);"></i></div>
+<img id = "map" width = "1000px" height = "600px">
+<div style = "float: right; font-size: 40px; padding: 280px 25px; margin-left: 10px; color: #63858e;" onmouseover = "this.style.cursor = 'pointer'" onclick = "next_map()" id = "next_map"><i class = "fa fa-play"></i></div>
+</div>
+
+
+<div id = "mySidebar" class = "w3-animate-left">
+<div style = "height: 30px;">
+<div style = "color: #63858e; float: left;"><button onclick = "close_side()" class = "navig"><i class = "fa fa-arrow-left"></i></button></div>
+<p class = "myfont" style = "font-size: 25px; margin-left: 20%; margin-top: 0px;">
+Welcome
+</p>
+</div>
+<div style = "margin-top: 0px;">
+<div class = "w3-dropdown-hover sidebar_button">
+Sign in
+<div class = "w3-dropdown-content" style = "width: 50%; padding: 0px 0px;position: absolute; top: 0px; left: 100%;">
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; border-width: 0px; width: 100%;"><a>Student</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Teacher</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Admin</a></p>
+</div>
+</div>
+<div class = "sidebar_button">
+<a>Contact Us</a>
+</div>
+<div class = "sidebar_button">
+<a>Gallery</a>
+</div>
+<div class = "sidebar_button">
+<a>Houses</a>
+</div>
+<div class = "sidebar_button">
+<a>Report to Head Master</a>
+</div>
+</div>
+</div>
+<div class = "top-bar-2" style = "background-color: white;">
+<button onclick = "open_side()" class = "navig " id = "opener" style = "background-color: rgba(0,0,0,0)"><i class = "fa fa-bars"></i></button>
+</div>
+
+<div class = "top-bar" style = "background-color: white;">
+<div class = "top-button">
+<button onclick = "window.location.href = 'main.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-home"></i></div>Home</button>
+<button onclick = "window.location.href = 'academics.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-chalkboard-teacher"></i></div>Academics</button>
+<button onclick = "window.location.href = 'admission.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-university"></i></div>Admission</button>
+<button onclick = "window.location.href = 'gallery.html'" style = "background-color: #63858e; color: white"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-book-reader"></i></div>Gallery</button>
+<button onclick = "map_open()" style = "border-width: 0px;" ><div style = "float: left; margin-left: 10px;"><i class = "fa fa-align-justify"></i></div>Hogwarts Map</button>
+
+</div>
+</div>
+
+<div id = "blur_back" style = "min-width: 100%; filter: blur(0px); overflow: auto;">
+<!--<marquee behavior = "scroll" scrollamount = "20">--><div class = "welcome-text"><img src = "logo.png" height = "100px" style = "padding: 0px 10px;">HOGWARTS SCHOOL OF WITCHCRAFT & WIZARDRY</div><!--</marquee>-->
+<div style = "background-color: rgba(300,300,300,1); overflow: auto; padding-bottom: 20px;">
+
+<section class = "slopy_container">
+<div class = "slopy">
+<img src = "gallery/2.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/3.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/4.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/5.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/6.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/7.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/8.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/9.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/11.jpg" class = "g_img">
+</div>
+<div class = "slopy">
+<img src = "gallery/12.jpg" class = "g_img">
+</div>
+</section>
+<div class = "a wow bounceIn" data-wow-duration="2s"><h1>Quidditch</h1>Quidditch has been played in the wizarding world for almost 1,000 years. The Quidditch World Cup has been played every four years, more or less, since 1473.</div>
+<div class = "b wow bounceIn" data-wow-duration="2s"><h1>Dobby, a free elf.</h1>and one of Harry Potter's most loyal friends.</div>
+<div class = "c wow bounceIn" data-wow-duration="2s"><h1>The moving stairs</h1>It was Rowena Ravenclaw who came up with the idea of using moving stairs.</div>
+<div class = "d wow bounceIn" data-wow-duration="2s"><h1>The Great Hall</h1>is the main gathering area in the school, which is located off the Entrance Hall.</div>
+<div class = "e wow bounceIn" data-wow-duration="2s"><h1>Hermione Jean Granger</h1>From bookish Muggle-born to one of Gryffindor's bravest.</div>
+<div class = "f wow bounceIn" data-wow-duration="2s"><h1>The Kings Cross Station</h1>King's Cross, which is one of London's main railway stations, has a very personal significance for me, because my parents met on a train to Scotland which departed from King's Cross station.<br><div style = "float: right;">- J.K. Rowling</div></div>
+<div class = "g wow bounceIn" data-wow-duration="2s"><h1>The Deathly Hallows</h1>Three legendary objects owned and likely created by the Peverell brothers. Together, they are said to make one 'master of death'.</div>
+<div class = "h wow bounceIn" data-wow-duration="2s"><h1>Albus Percivel Wulfric Brian Dumbledore</h1>There are all kinds of courage. It takes a great deal of bravery to stand up to our enemies, but a great deal more to stand up to our friends.<br><div style = "float: right;">- Albus Dumbledore</div></div>
+<div class = "i wow bounceIn" data-wow-duration="2s"><h1>The viaduct</h1> a bridge at Hogwarts Castle.</div>
+<div class = "j wow bounceIn" data-wow-duration="2s"><h1>The Astronomy Tower</h1>"If I tell you to leave me and save yourself, you will do as I tell you?"<br><div style = "float: right;">-Albus to Harry</div></div>
+</div>
+</div>
+
+<script>
+function map_close(){
+	document.getElementById("map_holder").style.display = "none";
+	document.getElementById("blur_back").style.filter = "blur(0px)";
+}
+function map_open(){
+	document.getElementById("map_holder").style.display =  "inline";
+	document.getElementById("blur_back").style.filter = "blur(6px)";
+}
+
+var j = 0;
+var arr = ["map1.jpg","map2.jpg"];
+document.getElementById("map").src = arr[j];
+
+function next_map(){
+	if(this.j == 1){
+		return;
+	}
+	this.j += 1;
+	document.getElementById("map").src = this.arr[this.j];
+	if(this.j == 1){
+		document.getElementById("prev_map").style.opacity = "1";
+		document.getElementById("next_map").style.opacity = "0";
+	}
+}
+function prev_map(){
+	if(this.j == 0)
+		return;
+	this.j -= 1;
+	document.getElementById("map").src = this.arr[this.j];
+	if(this.j == 0){
+		document.getElementById("prev_map").style.opacity = "0";
+		document.getElementById("next_map").style.opacity = "1";
+	}
+}
+</script>
+</body>
+</html>

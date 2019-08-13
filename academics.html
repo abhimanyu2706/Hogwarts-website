@@ -1,0 +1,255 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="wow\css\libs\animate.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel = "stylesheet" href = "StyleSheet.css">
+<script src="wow\dist\wow.min.js"></script>
+ <script>
+ new WOW().init();
+ </script>
+<script>
+
+function open_side() {
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("opener").style.display = "none";
+}
+function close_side() {
+	document.getElementById("mySidebar").style.display = "none";
+	document.getElementById("opener").style.display = "block";
+}
+</script>
+
+
+<style>
+
+.img_cont {
+	margin-top: 50px;
+	width: 100%;
+	overflow: auto;
+}
+
+.p_image {
+	display: inline;
+	position: relative;
+	left: 25px;
+	opacity: 0.5;
+}
+.c_image {
+	display: inline;
+	position: relative;
+	left: 25px;
+}
+.n_image {
+	display: inline;
+	position: relative;
+	left: 25px;
+	opacity: 0.5;
+}
+#c_name {
+	font-size: 32px;
+	font-family: lucida console;
+	text-align: center;
+}
+</style>
+
+
+</head>
+<body style = "margin-top: 0; margin-left: 0px; margin-right: 0px; ">
+
+<div id = "map_holder">
+<i class="fa fa-minus-square" onclick = "map_close();" onmouseover = "this.style.cursor = 'pointer'" style="font-size:40px; color: #63858e;"></i><br>
+<div style = "float: left; font-size: 40px; padding: 280px 25px; margin-left: -10px; color: #63858e; opacity: 0;" onmouseover = "this.style.cursor = 'pointer'" onclick = "prev_map()" id = "prev_map"><i class = "fa fa-play" style = "transform: rotate(180deg);"></i></div>
+<img id = "map" width = "1000px" height = "600px">
+<div style = "float: right; font-size: 40px; padding: 280px 25px; margin-left: 10px; color: #63858e;" onmouseover = "this.style.cursor = 'pointer'" onclick = "next_map()" id = "next_map"><i class = "fa fa-play"></i></div>
+</div>
+
+
+<div id = "mySidebar" class = "w3-animate-left">
+<div style = "height: 30px;">
+<div style = "color: #63858e; float: left;"><button onclick = "close_side()" class = "navig"><i class = "fa fa-arrow-left"></i></button></div>
+<p class = "myfont" style = "font-size: 25px; margin-left: 20%; margin-top: 0px;">
+Welcome
+</p>
+</div>
+<div style = "margin-top: 0px;">
+<div class = "w3-dropdown-hover sidebar_button">
+Sign in
+<div class = "w3-dropdown-content" style = "width: 50%; padding: 0px 0px;position: absolute; top: 0px; left: 100%;">
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; border-width: 0px; width: 100%;"><a>Student</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Teacher</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Admin</a></p>
+</div>
+</div>
+<div class = "sidebar_button">
+<a>Contact Us</a>
+</div>
+<div class = "sidebar_button">
+<a>Gallery</a>
+</div>
+<div class = "sidebar_button">
+<a>Houses</a>
+</div>
+<div class = "sidebar_button">
+<a>Report to Head Master</a>
+</div>
+</div>
+</div>
+<div class = "top-bar-2">
+<button onclick = "open_side()" class = "navig " id = "opener" style = "background-color: rgba(0,0,0,0)"><i class = "fa fa-bars"></i></button>
+</div>
+
+<div class = "top-bar">
+<div class = "top-button">
+<button onclick = "window.location.href = 'main.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-home"></i></div>Home</button>
+<button onclick = "window.location.href = 'academics.html'" style = "background-color: #63858e; color: white"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-chalkboard-teacher"></i></div>Academics</button>
+<button onclick = "window.location.href = 'admission.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-university"></i></div>Admission</button>
+<button onclick = "window.location.href = 'gallery.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-book-reader"></i></div>Gallery</button>
+<button onclick = "map_open()" style = "border-width: 0px;" ><div style = "float: left; margin-left: 10px;"><i class = "fa fa-align-justify"></i></div>Hogwarts Map</button>
+
+</div>
+</div>
+
+<div id = "blur_back" style = "min-width: 100%; filter: blur(0px); overflow: auto;">
+<!--<marquee behavior = "scroll" scrollamount = "20">--><div class = "welcome-text"><img src = "logo.png" height = "100px" style = "padding: 0px 10px;">HOGWARTS SCHOOL OF WITCHCRAFT & WIZARDRY</div><!--</marquee>-->
+<div style = "width: 1100px; margin-left: auto; margin-right: auto; margin-top: 0px; background-color: rgba(300,300,300,0.5); overflow: auto; padding-bottom: 20px;">
+<div style = "text-align: center; font-family: Lucida console; font-size: 42px">Courses</div>
+
+
+<div class = "img_cont">
+<div class = "p_image" onmouseover = "point_cursor(this)"><img class = "w3-circle" id = "prev" onclick = "prev_func()" height = "300px" width = "300px"></div>
+<div class = "c_image"><img class = "w3-circle" id = "curr" height = "400px" width = "400px"></div>
+<div class = "n_image" onmouseover = "point_cursor(this)"><img class = "w3-circle" id = "next" onclick = "next_func()" height = "300px" width = "300px"></div>
+</div>
+
+<p id = "c_name"></p>
+<p id ="dis" class = "about myfont wow fadeInDown"></p>
+
+
+</div>
+</div>
+
+<script>
+
+function point_cursor(x){
+	x.style.cursor = "pointer";
+}
+
+var arr = ["astro.gif","charms.jpg","dada.jpg","fly.jpg","potion.jpg","herb.jpg","trans.png"];
+var names = ["Astronomy","Charms","Defence against Dark Arts","Flying","Potions","Herbology","Transfiguration"];
+var discription = [
+"Astronomy is the only field of study at Hogwarts that has a direct equivalent in the Muggle world. Astronomy classes take place in the Astronomy Tower, the tallest tower in Hogwarts, and are taught by Professor Aurora Sinistra. Lessons involve observations of the night skies with telescopes. Lessons are held every week at midnight, and first years have lessons on Wednesday. Known student homework activities include learning the names of stars, constellations and planets, and their location, movements, and environments.",
+"Charms is the type of spells concerned with giving an object new and unexpected properties, and hence this class mainly consists on learning those sorts of spells. Charms classes are described as notoriously noisy and chaotic, as the lessons are largely practical. Many of the exposition sequences in the books are set in Charms classes, which are on the second floor of Hogwarts.",
+"Defence Against the Dark Arts, commonly shortened to D.A.D.A., is the class that teaches students defensive techniques to defend against the Dark Arts, and to be protected from Dark creatures. The subject has an extraordinarily high turnover of staff members - throughout Harry Potter's time at Hogwarts, no Defence Against the Dark Arts teacher has remained at Hogwarts for more than one school year. These included Quirinus Quirrell, Gilderoy Lockhart, Remus Lupin, Bartemius Crouch Jr impersonating Alastor \"Mad-Eye\" Moody, Dolores Umbridge, Severus Snape, and Amycus Carrow. Hagrid suggested that \"They\'re startin\' ter think the job\'s jinxed. No one\'s lasted long for a while now. Dumbledore suggested that Voldemort cursed the position because his application for it was rejected. The position had also been coveted by Snape, but he was denied the position as well. Snape was finally appointed D.A.D.A. professor in 1996. After the end of the Second Wizarding War, the jinx on the position was lifted. Harry Potter would occasionally come to the class to give lectures on the subject.",
+"Flying is the class that teaches the use of broomsticks made for the use of flying and is taught only to Hogwarts first years[citation needed] by Rolanda Hooch. The subject is the only one that requires physicality. The course aims of these lessons were largely aimed towards providing students with a basic understanding of the only the most elementary principles behind the study of broomology, which is to say, both how to handle a broom and progressively work on various techniques and manoeuvres performed while in flight, as well as receiving proper instructions on the subject of proper broom care and maintenance.",
+"is described as the art of creating mixtures with magical effects. It requires the correct mixing and stirring of ingredients at the right times and temperatures. Snape's lessons are depicted as unhappy, oppressing times set in a gloomy dungeon in the basement of the castle, whilst Horace Slughorn's, who replaces Severus Snape as Potions Master, is shown as more cheerful and even fun at times.",
+"Herbology is the study of magical plants and how to take care of, utilise and combat them. There are at least three greenhouses, holding a variety of magical plants of varying degrees of lethality. Herbology is also the subject Neville Longbottom excels in. He later replaces Professor Sprout as the Herbology teacher.",
+"Transfiguration is the art of changing the form or appearance of an object, and hence this is what this class teaches. Transfiguration is a theory-based subject, including topics such as \"Switching Spells\" (altering only a part of some object, such as giving a human rabbit's ears); Vanishing Spells (causing an object to completely disappear); and Conjuring Spells (creating objects out of thin air). It is possible to change inanimate objects into animate ones and vice versa - Minerva McGonagall, the class's teacher, transfigures her desk into a pig."
+];
+var i = 0;
+document.getElementById("curr").src = arr[i];
+document.getElementById("next").src = arr[i+1];
+document.getElementById("c_name").innerHTML = names[i];
+document.getElementById("dis").innerHTML = discription[i];
+function next_func(){
+	if(i == 6)
+		return;
+	this.i += 1;
+	
+	if(this.i<= (this.arr.length - 2)){
+	
+		var brr = this.arr.slice(i-1,i+2);
+	
+		document.getElementById("prev").src = brr[0];
+		document.getElementById("curr").src = brr[1];
+		document.getElementById("next").src = brr[2];
+	}
+	else{
+		var brr = this.arr.slice(i-1,i+1);
+	
+		document.getElementById("prev").src = brr[0];
+		document.getElementById("curr").src = brr[1];
+	}
+	if(i == 6)
+		document.getElementById("next").style.opacity = 0;
+	if(i == 1)
+		document.getElementById("prev").style.opacity = 1;
+	document.getElementById("c_name").innerHTML = names[i];
+	document.getElementById("dis").innerHTML = discription[i];
+}
+function prev_func(){
+	if(i == 0)
+		return;
+	this.i -= 1;
+		
+	if(this.i > 0){
+	
+		var brr = this.arr.slice(i-1,i+2);
+	
+		document.getElementById("prev").src = brr[0];
+		document.getElementById("curr").src = brr[1];
+		document.getElementById("next").src = brr[2];
+	}
+	else{
+		var brr = this.arr.slice(i,i+2);
+	
+		document.getElementById("curr").src = brr[0];
+		document.getElementById("next").src = brr[1];
+	}
+	document.getElementById("c_name").innerHTML = this.i;
+	if(i==0)
+		document.getElementById("prev").style.opacity = 0;
+	if(i == 5)
+		document.getElementById("next").style.opacity = 1;
+	document.getElementById("c_name").innerHTML = names[i];
+	document.getElementById("dis").innerHTML = discription[i];
+}
+
+
+
+
+function map_close(){
+	document.getElementById("map_holder").style.display = "none";
+	document.getElementById("blur_back").style.filter = "blur(0px)";
+}
+function map_open(){
+	document.getElementById("map_holder").style.display =  "inline";
+	document.getElementById("blur_back").style.filter = "blur(6px)";
+}
+
+var j = 0;
+var crr = ["map1.jpg","map2.jpg"];
+document.getElementById("map").src = crr[j];
+
+function next_map(){
+	if(this.j == 1){
+		return;
+	}
+	this.j += 1;
+	document.getElementById("map").src = this.crr[this.j];
+	if(this.j == 1){
+		document.getElementById("prev_map").style.opacity = "1";
+		document.getElementById("next_map").style.opacity = "0";
+	}
+}
+function prev_map(){
+	if(this.j == 0)
+		return;
+	this.j -= 1;
+	document.getElementById("map").src = this.crr[this.j];
+	if(this.j == 0){
+		document.getElementById("prev_map").style.opacity = "0";
+		document.getElementById("next_map").style.opacity = "1";
+	}
+}
+
+
+
+</script>
+
+</body>
+</html>

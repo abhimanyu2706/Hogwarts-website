@@ -1,0 +1,226 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="wow\css\libs\animate.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel = "stylesheet" href = "StyleSheet.css">
+<script src="wow\dist\wow.min.js"></script>
+ <script>
+ new WOW().init();
+ </script>
+<script>
+
+function open_side() {
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("opener").style.display = "none";
+}
+function close_side() {
+	document.getElementById("mySidebar").style.display = "none";
+	document.getElementById("opener").style.display = "block";
+}
+</script>
+
+</head>
+
+<body style = "margin-top: 0; margin-left: 0px; margin-right: 0px; ">
+
+
+<div id = "map_holder">
+<i class="fa fa-minus-square" onclick = "map_close();" onmouseover = "this.style.cursor = 'pointer'" style="font-size:40px; color: #63858e;"></i><br>
+<div style = "float: left; font-size: 40px; padding: 280px 25px; margin-left: -10px; color: #63858e; opacity: 0;" onmouseover = "this.style.cursor = 'pointer'" onclick = "prev_map()" id = "prev_map"><i class = "fa fa-play" style = "transform: rotate(180deg);"></i></div>
+<img id = "map" width = "1000px" height = "600px">
+<div style = "float: right; font-size: 40px; padding: 280px 25px; margin-left: 10px; color: #63858e;" onmouseover = "this.style.cursor = 'pointer'" onclick = "next_map()" id = "next_map"><i class = "fa fa-play"></i></div>
+</div>
+
+
+
+<div id = "mySidebar" class = "w3-animate-left">
+<div style = "height: 30px;">
+<div style = "color: #63858e; float: left;"><button onclick = "close_side()" class = "navig"><i class = "fa fa-arrow-left"></i></button></div>
+<p class = "myfont" style = "font-size: 25px; margin-left: 20%; margin-top: 0px;">
+Welcome
+</p>
+</div>
+<div style = "margin-top: 0px;">
+<div class = "w3-dropdown-hover sidebar_button">
+Sign in
+<div class = "w3-dropdown-content" style = "width: 50%; padding: 0px 0px;position: absolute; top: 0px; left: 100%;">
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; border-width: 0px; width: 100%;"><a>Student</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Teacher</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Admin</a></p>
+</div>
+</div>
+<div class = "sidebar_button">
+<a>Contact Us</a>
+</div>
+<div class = "sidebar_button">
+<a>Gallery</a>
+</div>
+<div class = "sidebar_button">
+<a>Houses</a>
+</div>
+<div class = "sidebar_button">
+<a>Report to Head Master</a>
+</div>
+</div>
+</div>
+<div class = "top-bar-2">
+<button onclick = "open_side()" class = "navig " id = "opener" style = "background-color: rgba(0,0,0,0)"><i class = "fa fa-bars"></i></button>
+</div>
+
+<div class = "top-bar">
+<div class = "top-button">
+<button onclick = "window.location.href = 'main.html'" style = "background-color: #63858e; color: white"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-home"></i></div>Home</button>
+<button onclick = "window.location.href = 'academics.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-chalkboard-teacher"></i></div>Academics</button>
+<button onclick = "window.location.href = 'admission.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-university"></i></div>Admission</button>
+<button onclick = "window.location.href = 'gallery.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-book-reader"></i></div>Gallery</button>
+<button onclick = "map_open()" style = "border-width: 0px;" ><div style = "float: left; margin-left: 10px;"><i class = "fa fa-align-justify"></i></div>Hogwarts Map</button>
+
+</div>
+</div>
+<div id = "blur_back" style = "min-width: 100%; filter: blur(0px); overflow: auto;">
+<!--<marquee behavior = "scroll" scrollamount = "20">--><div class = "welcome-text"><img src = "logo.png" height = "100px" style = "padding: 0px 10px;">HOGWARTS SCHOOL OF WITCHCRAFT & WIZARDRY</div><!--</marquee>-->
+
+<div style = "width: 1100px; margin-left: auto; margin-right: auto; margin-top: 0px; background-color: rgba(300,300,300,0.5); overflow: auto; padding-bottom: 20px;">
+<div class = "w3-content w3-section" style = "margin-top: 20px;">
+<img src = "slide/a.jpg" width = "100%" height = "600px" class = "mySlides w3-animate-right">
+<img src = "slide/f.jpg" width = "100%" height = "600px"class = "mySlides w3-animate-right">
+<img src = "slide/c.jpg" width = "100%" height = "600px"class = "mySlides w3-animate-right">
+<img src = "slide/e.jpg" width = "100%" height = "600px"class = "mySlides w3-animate-right">
+<!--<img src = "a.png" width = "100%" height = "600px" class = "mySlides w3-animate-right">-->
+<!--<button class = "w3-display-left w3-button w3-black" onclick = "plusDivs(-1)">&#10094;</button>
+<button class = "w3-display-right w3-button w3-black" onclick = "plusDivs(+1)">&#10095;</button>-->
+</div>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<div class = "about myfont section">
+<h1 class = "head w3-center">About us</h1>
+<div class = "wow fadeInDown" data-wow-duration="3s" data-wow-delay = "1s">
+Hogwarts School of Witchcraft and Wizardry is the British wizarding school, located in the Scottish Highlands. It takes students from Great Britain and Ireland. It is a state-owned school funded by the Ministry of Magic.
+
+The precise location of the school can never be uncovered because it was rendered Unplottable. To Muggles, the school looks like an old abandoned castle. Similarly, most wizarding schools locations are protected in order to prevent their ways of teaching being revealed, as well as protect the students and schools themselves from any harm.
+
+Established around the 10th century, Hogwarts is considered to be one of the finest magical institutions in the Wizarding World, though other notable schools included Beauxbatons Academy of Magic in France, the Durmstrang Institute in Scandinavia, and Ilvermorny School of Witchcraft and Wizardry in the United States. Children with magical abilities are enrolled at birth, and acceptance is confirmed by owl post at age eleven. However, if the child in question is a Muggle-born, a staff member from the school visits with the child and his or her family in order to inform them of their magical heritage and the existence of the Wizarding world.
+
+The school's motto is Draco Dormiens Nunquam Titillandus (Draco Dormiens Nvnqvam Titillandvs), which, translated from Latin, means "Never tickle a sleeping dragon".
+</div>
+</div>
+
+
+
+<div id = "credit" class = "section" >
+<div class = "head w3-center">Who can be given the credit</div>
+<div class = "member wow fadeIn" data-wow-duration="1s">
+<div style = "float: left;">
+<img src = "dumbleb.gif" height = "200px" width = "200px" style = "float: left; padding: 0px 10px;">
+</div>
+<div class = "details">
+<h3 style = "letter-spacing: 9px;">Dumbledore</h3>
+Head Master<br>
+Hogwarts<br>
+1966-1997
+</div>
+</div>
+<div class = "member wow fadeIn" data-wow-duration="1s" data-wow-delay = "0.5s">
+<div style = "float: left;">
+<img src = "minerva.gif" height = "200px" width = "200px" style = "float: left; padding: 0px 10px;">
+</div>
+<div class = "details">
+<h3>Professor McGonagall</h3>
+Head of Gryffindor House.<br>
+Transfiguration professor.<br>
+1972-2004
+</div>
+</div>
+<div class = "member wow fadeIn" data-wow-duration="1s" data-wow-delay = "0.75s">
+<div style = "float: left;">
+<img src = "snape.gif" height = "200px" width = "200px" style = "float: left; padding: 0px 10px;">
+</div>
+<div class = "details">
+<h3>Professor Severus Snape</h3>
+Head of Slytherin House.<br>
+Potions Master.<br>
+1972-2004
+</div>
+</div>
+<div class = "member wow fadeIn" data-wow-duration="1s" data-wow-delay = "1s">
+<div style = "float: left;">
+<img src = "hag.gif" height = "200px" width = "200px" style = "float: left; padding: 0px 10px;">
+</div>
+<div class = "details">
+<h3>Rubeus Hagrid</h3>
+The Keeper of Keys & Grounds.<br>
+Professor of the Care of Magical Creatures<br>
+1972-2004
+</div>
+</div>
+</div>
+<div>
+<!--<p>Updates<span class = "w3-badge">10</span></p>-->
+
+<script>
+function map_close(){
+	document.getElementById("map_holder").style.display = "none";
+	document.getElementById("blur_back").style.filter = "blur(0px)";
+}
+function map_open(){
+	document.getElementById("map_holder").style.display =  "inline";
+	document.getElementById("blur_back").style.filter = "blur(6px)";
+}
+
+var i = 0;
+var arr = ["map1.jpg","map2.jpg"];
+document.getElementById("map").src = arr[i];
+
+function next_map(){
+	if(this.i == 1){
+		return;
+	}
+	this.i += 1;
+	document.getElementById("map").src = this.arr[this.i];
+	if(this.i == 1){
+		document.getElementById("prev_map").style.opacity = "1";
+		document.getElementById("next_map").style.opacity = "0";
+	}
+}
+function prev_map(){
+	if(this.i == 0)
+		return;
+	this.i -= 1;
+	document.getElementById("map").src = this.arr[this.i];
+	if(this.i == 0){
+		document.getElementById("prev_map").style.opacity = "0";
+		document.getElementById("next_map").style.opacity = "1";
+	}
+}
+
+</script>
+
+
+
+</div>
+</div>
+</div>
+</body>
+</html>

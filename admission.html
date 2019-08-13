@@ -1,0 +1,192 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="wow\css\libs\animate.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel = "stylesheet" href = "StyleSheet.css">
+<script src="wow\dist\wow.min.js"></script>
+ <script>
+ new WOW().init();
+ </script>
+<script>
+
+function open_side() {
+	document.getElementById("mySidebar").style.display = "block";
+	document.getElementById("opener").style.display = "none";
+}
+function close_side() {
+	document.getElementById("mySidebar").style.display = "none";
+	document.getElementById("opener").style.display = "block";
+}
+</script>
+</head>
+<body style = "margin-top: 0; margin-left: 0px; margin-right: 0px; ">
+
+<div id = "map_holder">
+<i class="fa fa-minus-square" onclick = "map_close();" onmouseover = "this.style.cursor = 'pointer'" style="font-size:40px; color: #63858e;"></i><br>
+<div style = "float: left; font-size: 40px; padding: 280px 25px; margin-left: -10px; color: #63858e; opacity: 0;" onmouseover = "this.style.cursor = 'pointer'" onclick = "prev_map()" id = "prev_map"><i class = "fa fa-play" style = "transform: rotate(180deg);"></i></div>
+<img id = "map" width = "1000px" height = "600px">
+<div style = "float: right; font-size: 40px; padding: 280px 25px; margin-left: 10px; color: #63858e;" onmouseover = "this.style.cursor = 'pointer'" onclick = "next_map()" id = "next_map"><i class = "fa fa-play"></i></div>
+</div>
+
+
+
+<div id = "mySidebar" class = "w3-animate-left">
+<div style = "height: 30px;">
+<div style = "color: #63858e; float: left;"><button onclick = "close_side()" class = "navig"><i class = "fa fa-arrow-left"></i></button></div>
+<p class = "myfont" style = "font-size: 25px; margin-left: 20%; margin-top: 0px;">
+Welcome
+</p>
+</div>
+<div style = "margin-top: 0px;">
+<div class = "w3-dropdown-hover sidebar_button">
+Sign in
+<div class = "w3-dropdown-content" style = "width: 50%; padding: 0px 0px;position: absolute; top: 0px; left: 100%;">
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; border-width: 0px; width: 100%;"><a>Student</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Teacher</a></p>
+<p class = "sidebar_button" style = "margin-top: 0px; margin-bottom:0px; width: 100%;"><a>Admin</a></p>
+</div>
+</div>
+<div class = "sidebar_button">
+<a>Contact Us</a>
+</div>
+<div class = "sidebar_button">
+<a>Gallery</a>
+</div>
+<div class = "sidebar_button">
+<a>Houses</a>
+</div>
+<div class = "sidebar_button">
+<a>Report to Head Master</a>
+</div>
+</div>
+</div>
+<div class = "top-bar-2">
+<button onclick = "open_side()" class = "navig " id = "opener" style = "background-color: rgba(0,0,0,0)"><i class = "fa fa-bars"></i></button>
+</div>
+
+<div class = "top-bar">
+<div class = "top-button">
+<button onclick = "window.location.href = 'main.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-home"></i></div>Home</button>
+<button onclick = "window.location.href = 'academics.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-chalkboard-teacher"></i></div>Academics</button>
+<button onclick = "window.location.href = 'admission.html'" style = "background-color: #63858e; color: white"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-university"></i></div>Admission</button>
+<button onclick = "window.location.href = 'gallery.html'"><div style = "float: left; margin-left: 10px;"><i class = "fas fa-book-reader"></i></div>Gallery</button>
+<button onclick = "map_open()" style = "border-width: 0px;" ><div style = "float: left; margin-left: 10px;"><i class = "fa fa-align-justify"></i></div>Hogwarts Map</button>
+
+</div>
+</div>
+
+<div id = "blur_back" style = "min-width: 100%; filter: blur(0px); overflow: auto;">
+<!--<marquee behavior = "scroll" scrollamount = "20">--><div class = "welcome-text"><img src = "logo.png" height = "100px" style = "padding: 0px 10px;">HOGWARTS SCHOOL OF WITCHCRAFT & WIZARDRY</div><!--</marquee>-->
+<div style = "width: 1100px; margin-left: auto; margin-right: auto; margin-top: 0px; background-color: rgba(300,300,300,0.5); overflow: auto; padding-bottom: 20px;">
+<div class = "section">
+<center><h4 class = "myfont">Please fill out this form to recieve your Acceptance Letter</h4></center>
+<h3 class = "myfont">Acceptance Letter Request</h3>
+<p style = "font-size: 12; color: #595959; margin-top: 0px;" class = "myfont">Please fill out this form and our headmistress will contact you soon.</p>
+</div>
+
+
+<form class = "section" style = "margin-top: 0px;" onsubmit = "alert('Your form has been accepted. We will contact you soon.')" method = "POST" action = "admission.php">
+<div class = "inp">
+Name:<br>
+<input type = "text" name = "f_name"  placeholder = "First" required>
+<input type = "text" name = "l_name" placeholder = "Last" required>
+</div>
+<div class = "inp">
+<br>Date of Birth:<br>
+<input type = "date" name = "dob" id = "dateob">
+</div>
+<div class = "inp">
+<br>Email:<br>
+<input type = "email" name = "email">
+</div>
+<div class = "inp">
+<br>My parents are:<br>
+<select name = "parents">
+<option>Select one</option>
+<option value = "MM">both Muggle</option>
+<option value = "WM">Mother is a Witch</option>
+<option value = "MW">Father is a Wizard</option>
+<option value = "WW">both Wizard</option>
+</select>
+</div>
+<div class = "inp">
+<br>Muggle mailing address:<br>
+<textarea name = "address" rows ="3" cols = "50" required></textarea>
+</div>
+<div class = "inp">
+<br>Muggle contact no.<br>
+<input type = "number" name = "contact" max = "9999999999" required>
+</div>
+<div class = "inp">
+<br><input type = "checkbox" required>Please check if you understand that you are NOT allowed to bring broomsticks as a 1st year<br>
+</div>
+<div><br>
+<button type = "submit" class = "butt">Submit</button>
+<button type = "reset" class = "butt">Reset</button>
+</form>
+
+</div>
+</div>
+</div>
+
+<script>
+var max_date = new Date();
+var dd = max_date.getDate();
+var mm = max_date.getMonth() + 1;  // January is 0
+var yyyy = max_date.getFullYear() - 10;
+
+if( dd < 10)
+	dd = '0' + dd;
+if( mm < 10)
+	mm = '0' + mm;
+max_date = yyyy + '-' + mm + '-' + dd;
+
+document.getElementById("dateob").setAttribute("max",max_date);
+
+
+
+
+
+function map_close(){
+	document.getElementById("map_holder").style.display = "none";
+	document.getElementById("blur_back").style.filter = "blur(0px)";
+}
+function map_open(){
+	document.getElementById("map_holder").style.display =  "inline";
+	document.getElementById("blur_back").style.filter = "blur(6px)";
+}
+
+var j = 0;
+var arr = ["map1.jpg","map2.jpg"];
+document.getElementById("map").src = arr[j];
+
+function next_map(){
+	if(this.j == 1){
+		return;
+	}
+	this.j += 1;
+	document.getElementById("map").src = this.arr[this.j];
+	if(this.j == 1){
+		document.getElementById("prev_map").style.opacity = "1";
+		document.getElementById("next_map").style.opacity = "0";
+	}
+}
+function prev_map(){
+	if(this.j == 0)
+		return;
+	this.j -= 1;
+	document.getElementById("map").src = this.arr[this.j];
+	if(this.j == 0){
+		document.getElementById("prev_map").style.opacity = "0";
+		document.getElementById("next_map").style.opacity = "1";
+	}
+}
+
+</script>
+</body>
+</html>
